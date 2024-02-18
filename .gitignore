@@ -1,0 +1,6 @@
+# created by virtualenv automatically
+env/
+.env
+files/
+.cache/
+.streamlit/

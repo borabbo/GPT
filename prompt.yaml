@@ -1,0 +1,3 @@
+_type: "prompt"
+template: "{country}의 유명한 음식은 무엇입니니까?"
+input_variables: ["country"]
