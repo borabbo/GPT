@@ -7,7 +7,7 @@ from langchain.agents import initialize_agent, AgentType
 from langchain.utilities import DuckDuckGoSearchAPIWrapper, GoogleSearchAPIWrapper
 import os
 import requests
-from langchain_core.messages.system import SystemMessage
+from langchain.schema import SystemMessage
 
 
 
