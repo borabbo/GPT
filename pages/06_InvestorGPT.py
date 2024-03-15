@@ -10,13 +10,18 @@ import requests
 from langchain.schema import SystemMessage
 
 
+google_api_key = st.text_input(label="GOOGLE_API_KEY")
+google_cse_id = st.text_input(label="GOOGLE CSE ID")
+alpha_vantage_api_key = st.text_input(label="Alpha Vantage api key")
 
+os.environ["GOOGLE_CSE_ID"] = google_api_key
+os.environ["GOOGLE_API_KEY"] = google_cse_id
 
 
 #Use Alpha Vantage API
-alpha_vantage_api_key = os.environ.get("ALPHA_VANTAGE_API_KEY")
-os.environ["GOOGLE_CSE_ID"] = os.environ.get("GOOGLE_CSE_ID")
-os.environ["GOOGLE_API_KEY"] = os.environ.get("GOOGLE_API_KEY")
+# alpha_vantage_api_key = os.environ.get("ALPHA_VANTAGE_API_KEY")
+# os.environ["GOOGLE_CSE_ID"] = os.environ.get("GOOGLE_CSE_ID")
+# os.environ["GOOGLE_API_KEY"] = os.environ.get("GOOGLE_API_KEY")
 
 
 llm = ChatOpenAI(temperature=0.1, model_name="gpt-3.5-turbo-1106")
