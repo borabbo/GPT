@@ -13,7 +13,6 @@ from langchain_core.messages.system import SystemMessage
 
 
 
-llm = ChatOpenAI(temperature=0.1, model_name="gpt-3.5-turbo-1106")
 #Use Alpha Vantage API
 alpha_vantage_api_key = os.environ.get("ALPHA_VANTAGE_API_KEY")
 os.environ["GOOGLE_CSE_ID"] = os.environ.get("GOOGLE_CSE_ID")
@@ -141,7 +140,7 @@ company = st.text_input("관심있는 회사 이름을 입력하세요 !")
 if company:
     
     result = agent.invoke(company)
-    st.write(result["output"])
+    st.write(result["output"].replace("$","\$"))
     
 
     
