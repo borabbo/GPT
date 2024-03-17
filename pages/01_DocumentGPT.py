@@ -2,10 +2,15 @@ from typing import Any, Dict, List, Optional
 from uuid import UUID
 import streamlit as st
 import time
+#from langchain_community.chat_models import ChatOpenAI
 from langchain.chat_models import ChatOpenAI
+#from langchain_community.document_loaders import UnstructuredFileLoader
 from langchain.document_loaders import UnstructuredFileLoader
+#from langchain_community.embeddings import OpenAIEmbeddings
+#from langchain.embeddings import CacheBackedEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings, CacheBackedEmbeddings
+#from langchain_community.vectorstores.faiss import FAISS
 from langchain.vectorstores import FAISS 
 from langchain.storage import LocalFileStore
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
